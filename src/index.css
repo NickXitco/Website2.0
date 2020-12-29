@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  font-family: europa, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.main {
+  background: #0a0a0a;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  background: #0a0a0a;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background: #0a0a0a;
+  width: 100%;
+  height: 175px;
+  box-shadow: black 0 5px 5px 0;
+
+  position: fixed;
+  z-index: 5;
+}
+
+.header-name {
+  position: static;
+  display: block;
+  padding: 23px 40px; /* DON'T CHANGE THIS I MESSED WITH THIS ON PURPOSE :) */
+}
+
+h2 {
+  font-weight: 600;
+  text-align: left;
+  font-size: 50px;
+  overflow: visible;
+  color: white;
+  height: auto;
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  background: #0a0a0a;
+  position: fixed;
+  z-index: -2;
+}
+
+.side-nav {
+  height: 100%;
+  background: #0a0a0a;
+
+  width: 200px;
+  box-shadow: black 5px 0 7px 0;
+
+  position: fixed;
+  z-index: 4;
+  margin-top: 175px;
+}
+
+ul {
+  padding: 60px 30px 30px;
+}
+
+h4 {
+  color: white;
+  font-size: 25px;
+}
+
+.highlight {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 2px;
+  margin-left: -10px;
+  box-shadow: #00ffea 0 0 7px 0;
+  background: #00ffea;
+  float: left;
+}
+
+.gallery {
+  width: calc(100% - 320px);
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  left: 200px;
+  background: #0a0a0a;
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin-top: 175px;
+}
+
+.side-nav-item {
+  padding-bottom: 45px;
+}
+
+.gallery-item {
+  width: 500px;
+  height: 300px;
+  border: solid white 2px;
+  box-shadow: white 0 0 5px 0;
+  margin: 20px;
+  position: relative;
+}
+
+.gallery-flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  z-index: 5;
+}
+
+.gallery-shade {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #000000e6, #00000066);
+  position: absolute;
+  z-index: 0;
+}
+
+.gallery-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.item-info {
+  color: white;
+  text-align: right;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.item-title {
+  font-weight: 700;
+}
+
+.item-description {
+  font-weight: 100;
+}
