@@ -2,17 +2,27 @@ import './App.css';
 import {Header} from './Header';
 import {SideNav} from "./SideNav";
 import {Gallery} from "./Gallery";
+import {PixiTest} from "./PixiTest";
+import React from "react";
 
 function App() {
   return (
-    <div className="main">
-      <Header/>
-      <Gallery/>
-      <SideNav/>
-      <div className="bg"/>
+    <div className="main" id="main">
+        <PixiTest/>
     </div>
   );
 }
+
+// function App() {
+//     return (
+//         <div className="main">
+//             <Header/>
+//             <Gallery/>
+//             <SideNav/>
+//             <div className="bg"/>
+//         </div>
+//     );
+// }
 
 export const PALETTE = {
     RED: "#ff0000",
