@@ -35,22 +35,49 @@ body {
 
   position: fixed;
   z-index: 5;
+
+  overflow: hidden;
+  transition: height 1s cubic-bezier(0.33, 1, 0.68, 1);
+
+
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  transition: width 1s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .header-name {
   position: static;
   display: block;
   padding: 23px 40px; /* DON'T CHANGE THIS I MESSED WITH THIS ON PURPOSE :) */
+  font-size: 30px;
+  line-height: 60px;
 }
 
 h2 {
   font-weight: 600;
   text-align: left;
-  font-size: 50px;
   overflow: visible;
   color: white;
   height: auto;
+
+  transition: font-size 1s, margin-left 1s cubic-bezier(0.33, 1, 0.68, 1), line-height 1s;
 }
+
+.hero-name {
+  font-size: 150px;
+  line-height: 250px;
+}
+
+.nick-shift {
+  margin-left: 42px;
+}
+
 
 .bg {
   height: 100%;
@@ -62,7 +89,7 @@ h2 {
 
 .side-nav {
   height: 100%;
-  background: #0a0a0a;
+  background: #0a0a0ae6;
 
   width: 200px;
   box-shadow: black 5px 0 7px 0;
@@ -76,6 +103,12 @@ ul {
   padding: 60px 30px 30px;
 }
 
+.subtitle {
+  font-variant: small-caps;
+  font-weight: 900;
+  font-size: 30px;
+}
+
 h4 {
   color: white;
   font-size: 25px;
@@ -83,17 +116,19 @@ h4 {
 
 .highlight {
   display: block;
-  position: relative;
-  height: 40px;
+  position: static;
+  height: 24px;
   width: 2px;
-  margin-left: -10px;
-  box-shadow: #00ffea 0 0 7px 0;
+
+  box-shadow: #00ffea 0 0 7px 1px;
   background: #00ffea;
-  float: left;
+
+  margin-top: 6px;
+  margin-left: -10px;
+  margin-right: 10px;
 }
 
 .gallery {
-  width: calc(100% - 320px);
   height: auto;
   position: absolute;
   z-index: 2;
@@ -107,6 +142,8 @@ h4 {
 
 .side-nav-item {
   padding-bottom: 45px;
+  display: flex;
+  align-items: center;
 }
 
 .gallery-item {
@@ -131,9 +168,30 @@ h4 {
 .gallery-shade {
   height: 100%;
   width: 100%;
-  background: linear-gradient(0deg, #000000e6, #00000066);
   position: absolute;
   z-index: 0;
+  transition: opacity 0.25s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.opaque {
+  opacity: 1;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.defaultShade {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.7));
+}
+
+.hoverShade {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0));
+}
+
+.colorShade {
+  transition: opacity 0.1s cubic-bezier(0.33, 1, 0.68, 1);
+  box-shadow: inset black 0 0 7px 0;
 }
 
 .gallery-image {
@@ -162,4 +220,6 @@ h4 {
 .pixi-canvas {
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: -5;
 }

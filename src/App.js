@@ -5,24 +5,24 @@ import {Gallery} from "./Gallery";
 import {PixiTest} from "./PixiTest";
 import React from "react";
 
-function App() {
-  return (
-    <div className="main" id="main">
-        <PixiTest/>
-    </div>
-  );
-}
-
 // function App() {
-//     return (
-//         <div className="main">
-//             <Header/>
-//             <Gallery/>
-//             <SideNav/>
-//             <div className="bg"/>
-//         </div>
-//     );
+//   return (
+//     <div className="main" id="main">
+//         <PixiTest/>
+//     </div>
+//   );
 // }
+
+function App() {
+    return (
+        <div className="main" id="main">
+            <Header/>
+            <Gallery/>
+            <SideNav/>
+            <div className="bg"/>
+        </div>
+    );
+}
 
 export const PALETTE = {
     RED: "#ff0000",
